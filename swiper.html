@@ -1,0 +1,93 @@
+<!--
+ * @Description: 这是***页面（组件）
+ * @Date: 2023-09-11 10:31:36
+ * @Author: chenyujie
+ * @LastEditors: chenyujie
+ * @LastEditTime: 2023-09-11 11:57:35
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>横向滚动banner</title>
+        <style>
+            :root {
+                --scollWidth: 100vw;
+                --scollHeight: 200px;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .content {
+                position: relative;
+                width: var(--scollWidth);
+                height: var(--scollHeight);
+                overflow: hidden;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            .imgContnet {
+                position: absolute;
+                transform-origin: left bottom;
+                transform: rotateZ(90deg)
+                    translateX(calc(-1 * var(--scollWidth)));
+                width: var(--scollHeight);
+                height: var(--scollWidth);
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            .imgContnet > div {
+                transform-origin: left top;
+                transform: rotateZ(-90deg)
+                    translateX(calc(-1 * var(--scollHeight)));
+                width: var(--scollWidth);
+                height: var(--scollHeight);
+                margin-top: calc(var(--scollWidth) - var(--scollHeight));
+                text-align: center;
+                line-height: 200px;
+            }
+            .imgContnet > div:nth-child(n) {
+                background: #f0f;
+            }
+            .imgContnet > div:nth-child(2n) {
+                background: #0ff;
+            }
+            .imgContnet > div:nth-child(3n) {
+                background: #ff0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="imgContnet">
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+                <div>假装这是一张图片</div>
+            </div>
+        </div>
+    </body>
+</html>
