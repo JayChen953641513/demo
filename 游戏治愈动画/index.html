@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        .animateNumber {
+            position: absolute;
+            color: greenyellow;
+            font-weight: bolder;
+            letter-spacing: 4px;
+            animation: addLifePoint 1s linear forwards;
+        }
+
+        @keyframes addLifePoint {
+            0% {
+                opacity: 0;
+                top: 100%;
+            }
+
+            80% {
+                opacity: 1;
+                top: 0;
+            }
+
+            100% {
+                opacity: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="animateNumber">+100</div>
+    </div>
+</body>
+
+</html>
